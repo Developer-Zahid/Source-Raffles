@@ -1,0 +1,96 @@
+/* Banner Section Style */
+.banner{
+    padding-top: toRem(160);
+    &__wrapper{
+        padding-bottom: toRem(90);
+        @include min-desktop{
+            padding-bottom: toRem(160);
+        }
+    }
+    &-shape{
+        filter: blur(110px);
+        @include min-mobile{
+            filter: blur(150px);
+        }
+        &--left{
+            left: -4.31%;
+            width: toRem(150);
+            height: toRem(150);
+            background-color: #6218D9;
+            @include min-desktop-xl{
+                left: 15%;
+            }
+            @include min-mobile{
+                width: toRem(219);
+                height: toRem(208);
+            }
+        }
+        &--center{
+            left: 49.86%;
+            transform: translateY(80%);
+            width: toRem(131);
+            height: toRem(124);
+            background-color: #A21CAF;
+            @include desktop{
+                left: initial;
+                right: 0;
+            }
+        }
+        &--right{
+            right: 0;
+            transform: translateY(20%);
+            width: toRem(200);
+            height: toRem(180);
+            background-color: #7E2FD7;
+            @include desktop{
+                bottom: 5%;
+            }
+            @include min-mobile{
+                width: toRem(340);
+                height: toRem(322);
+            }
+            @include min-desktop-xl{
+                right: 10%;
+            }
+        }
+    }
+    &__title{
+        font-size: toRem(70);
+        @extend %gradient-text;
+        @extend %shadow;
+        @include mobile{
+            font-size: toRem(50);
+        }
+    }
+    &__text{
+        font-size: toRem(15);
+        font-weight: 500;
+        margin: toRem(38) 0;
+    }
+    &__image{
+        animation-name: bounce;
+        animation-iteration-count: infinite;
+        &--front{
+            margin-top: toRem(70);
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            
+        }
+        &--back{
+            top: 0;
+            left: 29%;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+        }
+    }
+}
+
+/* Banner Image Animation Style */
+@keyframes bounce {
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(6%);
+    }
+}

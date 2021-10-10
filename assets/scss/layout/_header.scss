@@ -1,0 +1,101 @@
+/* Header Section Style */
+.header{
+	position: fixed;
+	z-index: 9;
+	padding-top: toRem(15);
+	@extend %transition;
+
+	.navbar{
+		&-toggler{
+			font-size: 2rem;
+			color: $color-white;
+			z-index: 8;
+			@extend %transition;
+			&[aria-expanded="true"],
+			&:hover{
+				color: $color-primary;
+			}
+		}
+
+		&-collapse{
+			@include desktop{
+				position: fixed;
+				top: 0;
+				right: 0;
+				transform: translateX(100%);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 50%;
+				height: 100vh;
+				background-color: $color-bg;
+				transition: transform ease-in-out .3s;
+				&.show{
+					transform: translateX(0);
+				}
+				.navbar-nav{
+					width: 100%;
+					.nav-item{
+						margin: 0.4rem 0;
+					}
+				}
+				.secondary-btn{
+					margin-top: 0.4rem;
+				}
+			}
+			@include tablet{
+				width: 100%;
+			}
+		}
+
+		.nav{
+			&-item{
+				@extend %transition;
+			}
+
+			&-link{
+				color: $color-text-secondary;
+				font-size: toRem(14);
+				font-weight: 500;
+				padding-left: toRem(20);
+				padding-right: toRem(20);
+				@extend %transition;
+				&.active,
+				&:hover,
+				&:focus{
+					color: $color-primary;
+				}
+			}
+		}
+	}
+
+	&--fixed{
+		padding-top: 0;
+		background-color: rgba($color-black, $alpha: 0.5);
+		backdrop-filter: saturate(180%) blur(5px);
+	}
+}
+
+/* Off Canvas Navbar Toggler */
+.offCanvasMenuCloser{
+	top: 0;
+	left: 0;
+	transform: translateX(100%);
+	width: 100%;
+	height: 100%;
+	background: rgba($color: #000000, $alpha: 0.5);
+	z-index: 8;
+	opacity: 0;
+	transition: opacity .4s ease .4s;
+	display: none;
+
+	&.show{
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	@include tablet-to-desktop-lg{
+		display: block;
+	}
+}

@@ -1,0 +1,8 @@
+/* Contact Section Style */
+.contact{
+    .text-lg{
+        @include min-desktop-lg{
+            width: 50%;
+        }
+    }
+}

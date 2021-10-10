@@ -1,0 +1,8 @@
+/* About Us Section Style */
+.about{
+    .text-lg{
+        @include min-desktop-lg{
+            width: 55%;
+        }
+    }
+}

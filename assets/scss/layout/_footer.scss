@@ -1,0 +1,32 @@
+/* Footer Section Style */
+.footer{
+    color: $color-text-secondary;
+    padding: 3rem 0;
+    &__list{
+        &__link{
+            @extend %transition;
+            &:hover,
+            &:focus{
+                text-decoration: underline $color-primary;
+            }
+        }
+    }
+    &__social{
+        &__item{
+            &:not(:last-child){
+                margin-right: toRem(16);
+            }
+        }
+        &__link{
+            width: toRem(40);
+            height: toRem(40);
+            background-color: $color-btn-bg;
+            @extend %transition;
+            &:hover,
+            &:focus{
+                color: $color-secondary;
+                background-color: $color-text-secondary;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+/* Common Button's Style */
+.primary-btn,
+.secondary-btn,
+.scroll-top__btn{
+	color: $color-text-secondary;
+	border-radius: toRem(5);
+	@extend %transition;
+	&:hover,
+	&:focus{
+		color: $color-secondary;
+	}
+}
+
+.primary-btn,
+.secondary-btn{
+	font-family: $font-primary;
+	font-weight: 500;
+}
+
+.primary-btn,
+.scroll-top__btn{
+	background: linear-gradient(86.95deg, #7A2FCC 2.58%, #5E14DC 105.04%);
+	isolation: isolate;
+	&::before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-text-secondary;
+		z-index: -1;
+		border-radius: inherit;
+		opacity: 0;
+		@extend %transition;
+	}
+	&:hover,
+	&:focus{
+		&::before{
+			opacity: 1;
+		}
+	}
+}
+
+.primary-btn{
+	font-size: toRem(16);
+	padding: toRem(20) toRem(40);
+}
+
+.secondary-btn{
+	font-size: toRem(14);
+	background-color: $color-btn-bg;
+	padding: toRem(12) toRem(24);
+	&:hover,
+	&:focus{
+		background-color: $color-text-secondary;
+	}
+}
+
+.scroll-top{
+	bottom: 3%;
+	right: 1%;
+	display: none;
+	cursor: pointer;
+	z-index: 7;
+	@include mobile{
+		right: 2%;
+		bottom: 2%;
+	}
+	&__btn{
+		width: 2.8rem;
+		height: 2.8rem;
+		font-size: 1.5rem;
+	}
+}
