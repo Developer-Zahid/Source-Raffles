@@ -39,7 +39,6 @@ body {
 	font-weight: 400;
 	font-family: $font-primary;
 	background-color: $color-bg;
-	
 }
 
 a,
@@ -92,19 +91,49 @@ img{
 .preloader{
 	top: 0;
 	left: 0;
+	right: 0;
+	bottom: 0;
 	z-index: 9999;
+	background: $color-btn-bg;
+	background: radial-gradient(top, circle, $color-btn-bg 0%, $color-bg 72%);
+	&__content.hide{
+		transition: transform 0.6s cubic-bezier(0.36, 0, 0.66, -0.56);
+	}
+	&__progressbar{
+		width: 65vw;
+		height: 2px;
+		border-radius: 2px;
+		background-color: rgba($color-btn-bg, $alpha: 0.9);
+		&__progress{
+			width: 0;
+			height: 100%;
+			border-radius: inherit;
+			@extend %gradient-bg;
+		}
+	}
+	&__counter{
+		font-size: toRem(24);
+		font-weight: 700;
+	}
+	&.hide,
+	&__content.hide{
+		transform: translate(0%, 100vh) matrix(1, 0, 0, 1, 0, 0);
+	}
+	&.hide{
+		transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+	}
 }
 
 /* Common Section Gap Style */
 .section-gap{
 	padding: 3rem 0;
-	@include min-desktop{
+	@include min-tablet{
 		padding: 5rem 0;
 	}
 	&--fix{
-		padding-bottom: calc(6rem - 30px);
-		@include desktop{
-			padding-bottom: calc(3rem - 30px);
+		padding-bottom: 1rem;
+		@include min-tablet{
+			padding-bottom: calc(5rem - 55px);
 		}
 	}
 }

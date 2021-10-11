@@ -1,0 +1,55 @@
+/* Features Section Style */
+.features{
+    &__block{
+        color: $color-white;
+        margin-bottom: toRem(55);
+        &__number{
+            width: toRem(72);
+            height: toRem(72);
+            color: $color-primary;
+            @extend %gradient-bg;
+            font-size: toRem(30);
+            font-weight: 500;
+            margin-right: toRem(40);
+            isolation: isolate;
+            @extend %transition;
+            @include tablet{
+                width: toRem(60);
+                height: toRem(60);
+                font-size: toRem(20);
+                margin-right: toRem(30);
+            }
+            @include mobile{
+                width: toRem(50);
+                height: toRem(50);
+                margin-right: toRem(20);
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $color-gray-100;
+                z-index: -1;
+                border-radius: inherit;
+                opacity: 1;
+                @extend %transition;
+            }
+        }
+        &__title{
+            font-size: toRem(24);
+            font-family: $font-primary;
+            font-weight: 500;
+        }
+        &:hover{
+            .features__block__number{
+                color: $color-white;
+                &::before{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

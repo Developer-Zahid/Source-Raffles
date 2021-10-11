@@ -1,5 +1,12 @@
 //Responsive Breakpoint SCSS Mixin:
 
+//xxs-custom
+@mixin mobile-custom {
+    @media (max-width: 365px) {
+        @content;
+    }
+}
+
 //xxs
 @mixin mobile-xxs {
     @media (max-width: 480px) {

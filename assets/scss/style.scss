@@ -1,16 +1,40 @@
 /* 
 ------------------
-Template Name: Name | Type
+Template Name: Source Raffles | Discord Gaming Bot Type Website
+Author Name: Developer Zahid
+Author Website: https://developer-zahid-portfolio.netlify.app/
+Author Email: coderexpertzahid@gmail.com
 Version: 1.00
 ------------------
 
 ----------------
-Table of Content
+Table of CSS Content
 ----------------
 
 1.Google Fonts Link
 2.Typography Reset
 3.Reset CSS
+4.Custom Container Style
+5.Preloader Section Style
+6.Common Section Gap Style
+7.Common Section Heading Style
+8.Common Large Text Style
+9.Common Link Text Style
+10.Common Transition Style
+11.Common Text Shadow Style
+12.Common Gradient Text Style
+13.Common Gradient Background Color Style
+14.Common Button's Style
+15.Header Section Style
+16.Off Canvas Navbar Toggler
+17.Banner Section Style
+18.Banner Image Animation Style
+19.About Us Section Style
+20.Features Section Style
+21.Supported Sites Section Style
+22.Contact Section Style
+23.Footer Section Style
+24.Terms and Privacy Page Style
 
 ------------------
 */
@@ -25,5 +49,8 @@ Table of Content
 @import "./layout/header";
 @import "./sections/banner";
 @import "./sections/about";
+@import "./sections/features";
+@import "./sections/supported-sites";
 @import "./sections/contact";
 @import "./layout/footer";
+@import "./pages/terms-and-privacy";

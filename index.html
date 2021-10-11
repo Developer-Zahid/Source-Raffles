@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Site Meta Data -->
     <meta name="author" content="Developer Zahid | Zahid Hasan Munna">
-    <meta name="description" content="My name is Zahid Hasan Munna. I'm a Front-End Developer. I created this Source Raffles website">
-    <meta name="keywords" content="frontend developer, frontend designer, web designer, developer, designer, developer zahid, dev-z">
+    <meta name="description" content="My name is Zahid Hasan Munna. I'm a Front-End Web Designer. I created this Source Raffles (Discord Gaming Bot Type Website)">
+    <meta name="keywords" content="gaming bot, discord bot, discord gaming bot, game bot, discord, source raffles, frontend designer, web designer, developer, designer, developer zahid, dev-z">
 	<!-- Site Title -->
 	<title>Source Raffles</title>
 	<!-- Favicon Link -->
@@ -19,9 +19,20 @@
 	<!-- All CSS -->
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/fonts/custom-icons/style.css">
+	<link rel="stylesheet" href="./assets/plugins/aos/css/aos.min.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="200">
+<body class="overflow-hidden" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="200">
+	<!-- Preloader Section -->
+	<div class="preloader position-fixed">
+		<div class="preloader__content d-flex flex-column align-items-center justify-content-center w-100 h-100">
+			<div class="preloader__progressbar d-flex align-items-center justify-content-center position-relative mb-3">
+				<div class="preloader__progressbar__progress position-absolute"></div>
+			</div>
+			<p class="preloader__counter mb-0">0%</p>
+		</div>
+	</div>
+
 	<!-- Header Section -->
 	<header class="header fixed-top w-100">
 		<nav class="navbar navbar-expand-lg">
@@ -89,7 +100,7 @@
 	</section>
 
 	<!-- About Us Section -->
-	<section id="about" class="about section-gap pt-0">
+	<section id="about" class="about section-gap pt-0" data-aos="fade-up" data-aos-offset="120">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-center">
@@ -103,8 +114,162 @@
 		</div>
 	</section>
 
+	<!-- Features Section -->
+	<section id="features" class="features section-gap section-gap--fix">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="section-header col-12 text-center">
+					<h1 class="section-header__title d-inline-block mb-0">Features</h1>
+				</div>
+				<div class="col-lg-6 col-md-10" data-aos="fade-up">
+					<div class="features__block d-flex align-items-center">
+						<div class="features__block__number d-inline-flex flex-shrink-0 align-items-center justify-content-center rounded-circle position-relative">1</div>
+						<div class="features__block__content">
+							<h2 class="features__block__title">User Friendly CLI</h2>
+							<p class="features__block__text mb-0">Simple to use, allowing a seamless process throughout</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-10" data-aos="fade-up">
+					<div class="features__block d-flex align-items-center">
+						<div class="features__block__number d-inline-flex flex-shrink-0 align-items-center justify-content-center rounded-circle position-relative">2</div>
+						<div class="features__block__content">
+							<h2 class="features__block__title">Automate Entries</h2>
+							<p class="features__block__text mb-0">Join multiple raffles easier than ever</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-10" data-aos="fade-up">
+					<div class="features__block d-flex align-items-center">
+						<div class="features__block__number d-inline-flex flex-shrink-0 align-items-center justify-content-center rounded-circle position-relative">3</div>
+						<div class="features__block__content">
+							<h2 class="features__block__title">Guides</h2>
+							<p class="features__block__text mb-0">Detailed guides on how to better your chances</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-10" data-aos="fade-up">
+					<div class="features__block d-flex align-items-center">
+						<div class="features__block__number d-inline-flex flex-shrink-0 align-items-center justify-content-center rounded-circle position-relative">4</div>
+						<div class="features__block__content">
+							<h2 class="features__block__title">Custom Toolbox</h2>
+							<p class="features__block__text mb-0">Tools such as GeoCoder, Address Jigger and more where it is supported</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-10" data-aos="fade-up">
+					<div class="features__block d-flex align-items-center">
+						<div class="features__block__number d-inline-flex flex-shrink-0 align-items-center justify-content-center rounded-circle position-relative">5</div>
+						<div class="features__block__content">
+							<h2 class="features__block__title">Supporting Forms</h2>
+							<p class="features__block__text mb-0">Such as Google, TypeForm and Microsoft</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-10" data-aos="fade-up">
+					<div class="features__block d-flex align-items-center">
+						<div class="features__block__number d-inline-flex flex-shrink-0 align-items-center justify-content-center rounded-circle position-relative">6</div>
+						<div class="features__block__content">
+							<h2 class="features__block__title">24/7 Support</h2>
+							<p class="features__block__text mb-0">Around the clock support in our Discord Server</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-10" data-aos="fade-up">
+					<div class="features__block d-flex align-items-center">
+						<div class="features__block__number d-inline-flex flex-shrink-0 align-items-center justify-content-center rounded-circle position-relative">7</div>
+						<div class="features__block__content">
+							<h2 class="features__block__title">Data Optimization</h2>
+							<p class="features__block__text mb-0">Reduce the proxy data usage on all drops</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-10" data-aos="fade-up">
+					<div class="features__block d-flex align-items-center">
+						<div class="features__block__number d-inline-flex flex-shrink-0 align-items-center justify-content-center rounded-circle position-relative">8</div>
+						<div class="features__block__content">
+							<h2 class="features__block__title">Group Tasks</h2>
+							<p class="features__block__text mb-0">Resume for each batch of Tasks you’ve created</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Supported Sites Section -->
+	<section id="sites" class="sites section-gap">
+		<div class="container">
+			<div class="row align-items-center text-center">
+				<div class="col-xl-6 col-lg-7 mb-5 mb-lg-0">
+					<div class="section-header mb-3">
+						<h1 class="section-header__title d-inline-block mb-0">Supported Sites</h1>
+					</div>
+					<a href="#!" class="simple-btn d-inline-block">+ Many More Sites</a>
+				</div>
+				<div class="col-xl-6 col-lg-5">
+					<ul class="sites__list list-inline">
+						<li class="sites__list__item list-inline-item">
+							<a href="#!" target="_blank" class="sites__list__link d-inline-block" data-aos="zoom-in">
+								<img src="./assets/images/client/client-1.png" alt="client logo" class="sites__list__link__image img-fluid">
+							</a>
+						</li>
+						<li class="sites__list__item list-inline-item">
+							<a href="#!" target="_blank" class="sites__list__link d-inline-block" data-aos="zoom-in">
+								<img src="./assets/images/client/client-2.png" alt="client logo" class="sites__list__link__image img-fluid">
+							</a>
+						</li>
+						<li class="sites__list__item list-inline-item">
+							<a href="#!" target="_blank" class="sites__list__link d-inline-block" data-aos="zoom-in">
+								<img src="./assets/images/client/client-3.png" alt="client logo" class="sites__list__link__image img-fluid">
+							</a>
+						</li>
+						<li class="sites__list__item list-inline-item">
+							<a href="#!" target="_blank" class="sites__list__link d-inline-block" data-aos="zoom-in">
+								<img src="./assets/images/client/client-4.png" alt="client logo" class="sites__list__link__image img-fluid">
+							</a>
+						</li>
+					</ul>
+					<ul class="sites__list list-inline mb-0">
+						<li class="sites__list__item list-inline-item">
+							<a href="#!" target="_blank" class="sites__list__link d-inline-block" data-aos="zoom-in">
+								<img src="./assets/images/client/client-5.png" alt="client logo" class="sites__list__link__image img-fluid">
+							</a>
+						</li>
+						<li class="sites__list__item list-inline-item">
+							<a href="#!" target="_blank" class="sites__list__link d-inline-block" data-aos="zoom-in">
+								<img src="./assets/images/client/client-6.png" alt="client logo" class="sites__list__link__image img-fluid">
+							</a>
+						</li>
+						<li class="sites__list__item list-inline-item">
+							<a href="#!" target="_blank" class="sites__list__link d-inline-block" data-aos="zoom-in">
+								<img src="./assets/images/client/client-7.png" alt="client logo" class="sites__list__link__image img-fluid">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pricing Section -->
+	<section id="pricing" class="pricing section-gap">
+		<div class="container">
+			<div class="row flex-lg-row-reverse align-items-center text-center">
+				<div class="col-lg-5">
+					<div class="section-header mb-lg-0">
+						<h1 class="section-header__title d-inline-block mb-0">Pricing</h1>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<p class="text-lg mx-auto mb-0">95€ initial fee (including first month) then 20€/monthly</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Contact Section -->
-	<section id="contact" class="contact section-gap">
+	<section id="contact" class="contact section-gap" data-aos="fade-up" data-aos-offset="120">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-center">
@@ -125,10 +290,10 @@
 					<div class="footer__block">
 						<ul class="footer__list text-center text-md-left mb-0">
 							<li class="footer__list__item mb-2">
-								<a href="#!" class="footer__list__link d-inline-block">Legal</a>
+								<a href="./privacy.html" class="footer__list__link d-inline-block">Legal</a>
 							</li>
 							<li class="footer__list__item">
-								<a href="#!" class="footer__list__link d-inline-block">Terms Of Service</a>
+								<a href="./terms.html" class="footer__list__link d-inline-block">Terms Of Service</a>
 							</li>
 						</ul>
 					</div>
@@ -166,6 +331,7 @@
 	<!-- All Scripts -->
 	<script src="./assets/js/jquery-1.12.4.min.js"></script>
 	<script src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./assets/plugins/aos/js/aos.min.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 </html>

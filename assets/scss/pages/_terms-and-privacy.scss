@@ -1,0 +1,22 @@
+/* Terms and Privacy Page Style */
+.terms-and-privacy{
+    .title{
+        color: $color-white;
+        font-size: toRem(22);
+        font-weight: 500;
+    }
+    p{
+        color: $color-text-primary;
+    }
+    .list{
+        color: $color-white;
+        font-size: toRem(18);
+        font-weight: 400;
+        font-family: $font-secondary;
+        list-style-type: disc;
+        letter-spacing: 0.02em;
+        li::marker{
+            color: $color-primary;
+        }
+    }
+}

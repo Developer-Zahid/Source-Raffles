@@ -1,0 +1,33 @@
+/* Supported Sites Section Style */
+.sites{
+    &__list{
+        &:not(:last-child){
+            margin-bottom: toRem(64);
+            .sites__list__item{
+                @include mobile-custom{
+                    &:nth-child(3){
+                        margin-right: toRem(0);
+                    }
+                    &:nth-child(4){
+                        display: block;
+                    }
+                }
+                
+            }
+        }
+        &__item{
+            @include mobile-xxs{
+                margin-bottom: toRem(10);
+            }
+            &:not(:last-child){
+                margin-right: toRem(25);
+                @include min-desktop-lg{
+                    margin-right: toRem(50);
+                }
+            }
+        }
+        &__link__image{
+            filter: drop-shadow(0px 10px 20px rgba(41, 41, 42, 0.07));
+        }
+    }
+}

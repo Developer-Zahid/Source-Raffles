@@ -19,7 +19,7 @@
 
 .primary-btn,
 .scroll-top__btn{
-	background: linear-gradient(86.95deg, #7A2FCC 2.58%, #5E14DC 105.04%);
+	@extend %gradient-bg;
 	isolation: isolate;
 	&::before{
 		content: "";
@@ -71,5 +71,22 @@
 		width: 2.8rem;
 		height: 2.8rem;
 		font-size: 1.5rem;
+	}
+}
+
+.simple-btn{
+	color: $color-white;
+	font-size: toRem(18);
+	font-family: $font-secondary;
+	font-weight: 300;
+	letter-spacing: 0.02em;
+	text-underline-offset: 0;
+	@extend %shadow;
+	@extend %transition;
+	&:hover,
+	&:focus{
+		color: $color-white;
+		text-decoration: underline $color-primary;
+		text-underline-offset: 0.5rem;
 	}
 }
