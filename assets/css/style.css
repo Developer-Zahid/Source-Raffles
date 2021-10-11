@@ -145,7 +145,8 @@ a:active {
   color: unset;
 }
 
-a[href*="mailto:"] {
+a[href*="mailto:"],
+a[target="_blank"] {
   word-wrap: anywhere;
 }
 
